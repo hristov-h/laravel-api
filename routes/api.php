@@ -23,8 +23,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
 
 Route::middleware(['auth:sanctum', 'admin'])->group(function () {
-    Route::get('/admin', [AdminController::class, 'index']);
-    Route::post('/admin', [AdminController::class, 'store']);
+
 });
 
 Route::post('/auth/register', [UserController::class, 'createUser']);
